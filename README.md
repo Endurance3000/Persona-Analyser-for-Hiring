@@ -71,18 +71,29 @@ Persona-Analyser-for-Hiring/
 
 ## 🚀 Getting Started
 
+### Quick Start (Recommended)
+
+No setup, no compiler, no configuration required.
+
+1. Grab the latest **`PAH.exe`** from the [Releases](../../releases) page.
+2. Run it — on first launch, it automatically generates all required files (`questions.txt`, `candidate_registry.txt`, `candidate_scores.txt`, `candidate_counter.txt`, etc.) in the same directory.
+3. Start using the Admin or Candidate panel right away.
+
+> ✅ The release build is fully self-contained. All required MinGW runtime DLLs (`libgcc_s_dw2-1.dll`, `libstdc++-6.dll`, `libwinpthread-1.dll`) ship alongside the executable, so it runs out of the box on any Windows machine — no installation or additional setup needed.
+
 ### Prerequisites
 
-- A C++ compiler supporting C++11 or later (e.g. **MinGW-w64 / g++**)
-- Windows OS recommended (for full graphics and password-masking support)
+- Windows OS (for full graphics and password-masking support)
 
-### Build from Source
+### Building from Source (Optional)
+
+Only needed if you want to modify the code yourself.
 
 ```bash
 g++ main.cpp candidate.cpp -o PAH.exe -lgdi32
 ```
 
-> The included `libgcc_s_dw2-1.dll`, `libstdc++-6.dll`, and `libwinpthread-1.dll` are MinGW runtime dependencies required to run the compiled executable on machines without MinGW installed.
+Requires a C++11-or-later compiler (e.g. **MinGW-w64 / g++**). If building manually, ensure `libgcc_s_dw2-1.dll`, `libstdc++-6.dll`, and `libwinpthread-1.dll` are placed alongside the executable.
 
 ### Run
 
